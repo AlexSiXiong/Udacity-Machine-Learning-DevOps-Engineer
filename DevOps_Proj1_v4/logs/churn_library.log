@@ -1,0 +1,19 @@
+root - INFO - Testing import_data: SUCCESS
+numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+root - INFO - Testing perform_eda: churn is created: SUCCESS
+root - INFO - Testing perform_eda: customer_age is created: SUCCESS
+root - INFO - Testing perform_eda: marital_status is created: SUCCESS
+root - INFO - Testing perform_eda: total_trans_ct is created: SUCCESS
+root - INFO - Testing perform_eda: heatmap is created: SUCCESS
+root - INFO - Testing perform_eda function: SUCCESS
+root - INFO - Testing encoder_helper: Encoding for Gender_Churn is SUCCESSFUL
+root - INFO - Testing encoder_helper: Encoding for Education_Level_Churn is SUCCESSFUL
+root - INFO - Testing encoder_helper: Encoding for Marital_Status_Churn is SUCCESSFUL
+root - INFO - Testing encoder_helper: Encoding for Income_Category_Churn is SUCCESSFUL
+root - INFO - Testing encoder_helper: Encoding for Card_Category_Churn is SUCCESSFUL
+root - INFO - Testing encoder_helper function: SUCCESS
+root - INFO - Testing perform_feature_engineering: label column created SUCCESSFUL
+root - INFO - Testing perform_feature_engineering: 'Churn' is binary
+root - INFO - Testing perform_feature_engineering: data split SUCCESS
+root - INFO - Testing train_models: Model default training SUCCESS
