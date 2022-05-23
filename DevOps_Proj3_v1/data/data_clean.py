@@ -37,12 +37,23 @@ def clean_data(df):
     """
     try:
         df.columns = df.columns.str.strip()
-        df.dropna(inplace=True)
+        
         df['salary'] = df['salary'].str.lstrip()
         df.drop("fnlgt", axis="columns", inplace=True)
         df.drop("education-num", axis="columns", inplace=True)
         df.drop("capital-gain", axis="columns", inplace=True)
         df.drop("capital-loss", axis="columns", inplace=True)
+
+        cols = list(df.columns.values)
+        cols.remove('hours-per-week')
+        cols.remove('age')
+        for i in cols:
+            df[i] = df[i].str.strip()
+        
+        df.drop_duplicates(ignore_index=True, inplace=True)
+        df.replace({'?': None}, inplace=True)
+        df.dropna(inplace=True)
+
         df.to_csv('census_cleaned.csv')
         logging.info('SUCCESS: cleaning data saved in file census_cleaned.csv')
         return df

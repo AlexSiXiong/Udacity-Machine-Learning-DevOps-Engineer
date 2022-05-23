@@ -1,0 +1,4 @@
+[core]
+    remote = driveremote
+['remote "driveremote"']
+    url = s3://ml-dvc-storage-1
