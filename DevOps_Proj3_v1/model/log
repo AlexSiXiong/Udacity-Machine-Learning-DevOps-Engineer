@@ -1,0 +1,48 @@
+root - INFO - Data split done.
+root - INFO - Fold:1
+root - INFO - Training set score: 0.7880
+root - INFO - Test set score: 0.7533
+root - INFO - ROC:0.7680297279338814
+root - INFO - Fold:2
+root - INFO - Training set score: 0.7819
+root - INFO - Test set score: 0.7662
+root - INFO - ROC:0.7811197220984599
+root - INFO - Fold:3
+root - INFO - Training set score: 0.7821
+root - INFO - Test set score: 0.7705
+root - INFO - ROC:0.7812754020842324
+root - INFO - Fold:4
+root - INFO - Training set score: 0.7824
+root - INFO - Test set score: 0.7618
+root - INFO - ROC:0.7759607343345469
+root - INFO - Fold:5
+root - INFO - Training set score: 0.7832
+root - INFO - Test set score: 0.7676
+root - INFO - ROC:0.7765905609076422
+root - INFO - Model saved.
+root - INFO - Model testset accuracy score: 0.7611
+root - INFO - Model testset roc score: 0.7745
+root - INFO - Data split done.
+root - INFO - Fold:1
+root - INFO - Training set score: 0.7809
+root - INFO - Test set score: 0.7590
+root - INFO - ROC:0.7725913335276007
+root - INFO - Fold:2
+root - INFO - Training set score: 0.7861
+root - INFO - Test set score: 0.7631
+root - INFO - ROC:0.766730511916648
+root - INFO - Fold:3
+root - INFO - Training set score: 0.7772
+root - INFO - Test set score: 0.7597
+root - INFO - ROC:0.7829806824668987
+root - INFO - Fold:4
+root - INFO - Training set score: 0.7760
+root - INFO - Test set score: 0.7649
+root - INFO - ROC:0.7829479476010471
+root - INFO - Fold:5
+root - INFO - Training set score: 0.7858
+root - INFO - Test set score: 0.7609
+root - INFO - ROC:0.765128894129045
+root - INFO - Model saved.
+root - INFO - Model testset accuracy score: 0.7458
+root - INFO - Model testset roc score: 0.7770
