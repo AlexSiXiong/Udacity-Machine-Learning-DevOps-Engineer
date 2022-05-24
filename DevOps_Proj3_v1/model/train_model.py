@@ -11,8 +11,9 @@ from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import KFold
 
+
 logging.basicConfig(
-    filename='./log',
+    filename='./model/log',
     level=logging.INFO,
     filemode='a',
     format='%(name)s - %(levelname)s - %(asctime)s - %(message)s',
@@ -69,7 +70,7 @@ def train_save_model(X, y):
     best_clf = model_arr[max_index]
 
     # save model
-    joblib.dump(best_clf, 'best_clf.pkl')
+    joblib.dump(best_clf, './model/best_clf.pkl')
     logging.info('Model saved.')
     return best_clf
 
@@ -79,10 +80,11 @@ def test_model(X_test, y_test, model):
     logging.info('Model testset roc score: {0:0.4f}'.format(roc_auc_score(y_test,y_pred)))
 
 if __name__ == '__main__':
-    df = pd.read_csv('../data/census_eda.csv')
-    df = df[cat_features]
-    y = df['salary'].values
-    X = df.drop('salary', axis=1).values
+    df = pd.read_csv('./data/census_eda.csv')
+    np_data = entire_data_processing(df)
+    
+    y = np_data[:, -1]
+    X = np_data[:, :-1]
 
     X_train, X_test, y_train, y_test = split_data(X, y)
     best_clf = train_save_model(X_train, y_train)
