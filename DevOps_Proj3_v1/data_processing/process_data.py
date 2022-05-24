@@ -54,8 +54,7 @@ def label_encoder(df, attribute, training):
         le.fit(list(set(df[attribute])))        
         save_encoder_classes(f'../data/label_encoders/{attribute}.npy', attribute, le)
     else:
-        encoder.classes_ = np.load(f'../data/label_encoders/{attribute}.npy')
-        le.fit(encoder.classes_)
+        le.classes_ = np.load(f'../data/label_encoders/{attribute}.npy')
     df[attribute] = le.transform(df[attribute])
 
 
@@ -74,8 +73,7 @@ def onehot_encoder(df, attribute, training):
         lb.fit(list(set(df[attribute])))
         save_encoder_classes(f'../data/onehot_encoders/{attribute}.npy', attribute, lb)    
     else:
-        encoder.classes_ = np.load(f'../data/onehot_encoders/{attribute}.npy')
-        lb.fit(encoder.classes_)
+        lb.classes_ = np.load(f'../data/onehot_encoders/{attribute}.npy')
     return lb.transform(df[attribute])
 
 
