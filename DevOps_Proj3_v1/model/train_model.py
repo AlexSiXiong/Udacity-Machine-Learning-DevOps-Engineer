@@ -10,10 +10,12 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import KFold
-
+import sys
+sys.path.append('.')
+from  data_processing.process_data import entire_data_processing  
 
 logging.basicConfig(
-    filename='./model/log',
+    filename='./log',
     level=logging.INFO,
     filemode='a',
     format='%(name)s - %(levelname)s - %(asctime)s - %(message)s',
@@ -80,8 +82,8 @@ def test_model(X_test, y_test, model):
     logging.info('Model testset roc score: {0:0.4f}'.format(roc_auc_score(y_test,y_pred)))
 
 if __name__ == '__main__':
-    df = pd.read_csv('./data/census_eda.csv')
-    np_data = entire_data_processing(df)
+    df = pd.read_csv('./data/census_cleaned.csv')
+    np_data = entire_data_processing(df, True)
     
     y = np_data[:, -1]
     X = np_data[:, :-1]
