@@ -75,7 +75,7 @@ def onehot_encoder(df, attribute, training):
         save_encoder_exist(f'../data/onehot_encoders/{attribute}.npy', attribute, lb)    
     else:
         encoder.classes_ = np.load(f'../data/onehot_encoders/{attribute}.npy')
-        le.fit(encoder.classes_)
+        lb.fit(encoder.classes_)
     return lb.transform(df[attribute])
 
 
