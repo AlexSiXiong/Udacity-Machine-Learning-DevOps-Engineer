@@ -43,6 +43,9 @@ def clean_data(df):
         df.drop("education-num", axis="columns", inplace=True)
         df.drop("capital-gain", axis="columns", inplace=True)
         df.drop("capital-loss", axis="columns", inplace=True)
+        df.drop("education", axis="columns", inplace=True)
+        df.drop("native-country", axis="columns", inplace=True)
+        df.drop("relationship", axis="columns", inplace=True)
 
         cols = list(df.columns.values)
         cols.remove('hours-per-week')
@@ -53,8 +56,8 @@ def clean_data(df):
         df.drop_duplicates(ignore_index=True, inplace=True)
         df.replace({'?': None}, inplace=True)
         df.dropna(inplace=True)
-
-        df.to_csv('census_cleaned.csv')
+        
+        df.to_csv('census_cleaned.csv', index=False)
         logging.info('SUCCESS: cleaning data saved in file census_cleaned.csv')
         return df
     except BaseException:
