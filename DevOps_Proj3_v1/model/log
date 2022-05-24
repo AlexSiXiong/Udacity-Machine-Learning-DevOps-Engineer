@@ -46,3 +46,31 @@ root - INFO - ROC:0.765128894129045
 root - INFO - Model saved.
 root - INFO - Model testset accuracy score: 0.7458
 root - INFO - Model testset roc score: 0.7770
+root - INFO - 24-May-22 10:58:14 - Data split done.
+root - INFO - 24-May-22 11:08:33 - Data split done.
+root - INFO - 24-May-22 11:08:58 - Data split done.
+root - INFO - 24-May-22 11:40:18 - Data split done.
+root - INFO - 24-May-22 12:15:14 - Data split done.
+root - INFO - 24-May-22 12:15:14 - Fold:1
+root - INFO - 24-May-22 12:15:14 - Training set score: 0.7646
+root - INFO - 24-May-22 12:15:14 - Test set score: 0.7302
+root - INFO - 24-May-22 12:15:14 - ROC:0.7499010083944881
+root - INFO - 24-May-22 12:15:14 - Fold:2
+root - INFO - 24-May-22 12:15:14 - Training set score: 0.7670
+root - INFO - 24-May-22 12:15:14 - Test set score: 0.7437
+root - INFO - 24-May-22 12:15:14 - ROC:0.7607081916214931
+root - INFO - 24-May-22 12:15:15 - Fold:3
+root - INFO - 24-May-22 12:15:15 - Training set score: 0.7598
+root - INFO - 24-May-22 12:15:15 - Test set score: 0.7468
+root - INFO - 24-May-22 12:15:15 - ROC:0.7654674932813303
+root - INFO - 24-May-22 12:15:15 - Fold:4
+root - INFO - 24-May-22 12:15:15 - Training set score: 0.7731
+root - INFO - 24-May-22 12:15:15 - Test set score: 0.7348
+root - INFO - 24-May-22 12:15:15 - ROC:0.7551911412875362
+root - INFO - 24-May-22 12:15:15 - Fold:5
+root - INFO - 24-May-22 12:15:15 - Training set score: 0.7622
+root - INFO - 24-May-22 12:15:15 - Test set score: 0.7390
+root - INFO - 24-May-22 12:15:15 - ROC:0.7586997936654394
+root - INFO - 24-May-22 12:15:15 - Model saved.
+root - INFO - 24-May-22 12:15:15 - Model testset accuracy score: 0.7352
+root - INFO - 24-May-22 12:15:15 - Model testset roc score: 0.7645
