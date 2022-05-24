@@ -41,7 +41,7 @@ def categorize_age(df):
     df['age'] = df['age'].apply(get_age_group)
 
 
-def save_encoder_classes(path, attribute, training):
+def save_encoder_classes(path, attribute, training, le):
     if not os.path.exists(path):
         np.save(path, le.classes_)
         logging.info('init and save encoder classes_')
@@ -52,7 +52,7 @@ def label_encoder(df, attribute, training):
     
     if training:
         le.fit(list(set(df[attribute])))        
-        save_encoder_exist(f'../data/label_encoders/{attribute}.npy', attribute, le)
+        save_encoder_classes(f'../data/label_encoders/{attribute}.npy', attribute, le)
     else:
         encoder.classes_ = np.load(f'../data/label_encoders/{attribute}.npy')
         le.fit(encoder.classes_)
@@ -72,7 +72,7 @@ def onehot_encoder(df, attribute, training):
     
     if training:
         lb.fit(list(set(df[attribute])))
-        save_encoder_exist(f'../data/onehot_encoders/{attribute}.npy', attribute, lb)    
+        save_encoder_classes(f'../data/onehot_encoders/{attribute}.npy', attribute, lb)    
     else:
         encoder.classes_ = np.load(f'../data/onehot_encoders/{attribute}.npy')
         lb.fit(encoder.classes_)
