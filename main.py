@@ -111,7 +111,7 @@ def data_folder_path(subfolder, file):
     return os.path.join(root, "Udacity-Machine-Learning-DevOps-Engineer/DevOps_Proj3_v1", subfolder, file)
 
 # Load artifacts
-lgbm_model = joblib.load(data_folder_path('model','best_clf.pkl'))
+lgbm_model = joblib.load('./best_clf.pkl')
 
 
 # Root path
