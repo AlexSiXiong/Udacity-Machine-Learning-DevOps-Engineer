@@ -4,7 +4,7 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 
 ## Model Details
 
-The model is a Gradient Boosting Classifier with the default scikit-learn hyperparameters.
+The model is a lightgbm with the default scikit-learn hyperparameters.
 
 ## Intended Use
 
