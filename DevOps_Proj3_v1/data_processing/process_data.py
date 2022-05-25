@@ -3,7 +3,7 @@ import logging
 
 import pandas as pd
 import numpy as np
-
+import os
 from sklearn import preprocessing
 
 
@@ -13,6 +13,17 @@ logging.basicConfig(
     filemode='a',
     format='%(name)s - %(levelname)s - %(asctime)s - %(message)s',
     datefmt='%d-%b-%y %H:%M:%S')
+
+def data_folder_path(subfolder, file):
+    """[summary]
+    Args:
+        subfolder ([str]): [subfolder name]
+        file ([str]): [file name]
+    Returns:
+        [str]: [file complete path]
+    """
+    root = os.path.dirname(os.getcwd())
+    return os.path.join(root, "Udacity-Machine-Learning-DevOps-Engineer/DevOps_Proj3_v1", subfolder, file)
 
 
 def get_age_group(age):
@@ -47,11 +58,12 @@ def save_encoder_classes(path, attribute, le):
 def label_encoder(df, attribute, training):
     le = preprocessing.LabelEncoder()
     
+    path = data_folder_path('data/label_encoders', f'{attribute}.npy')
     if training:
         le.fit(list(set(df[attribute])))        
-        save_encoder_classes(f'./data/label_encoders/{attribute}.npy', attribute, le)
+        save_encoder_classes(path, attribute, le)
     else:
-        le.classes_ = np.load(f'./data/label_encoders/{attribute}.npy')
+        le.classes_ = np.load(path)
     df[attribute] = le.transform(df[attribute])
 
 
@@ -66,11 +78,12 @@ def label_encoding_attribute(df, training):
 def onehot_encoder(df, attribute, training):
     lb = preprocessing.LabelBinarizer()
     
+    path = data_folder_path('data/onehot_encoders', f'{attribute}.npy')
     if training:
         lb.fit(list(set(df[attribute])))
-        save_encoder_classes(f'./data/onehot_encoders/{attribute}.npy', attribute, lb)    
+        save_encoder_classes(path, attribute, lb)    
     else:
-        lb.classes_ = np.load(f'./data/onehot_encoders/{attribute}.npy')
+        lb.classes_ = np.load(path)
     return lb.transform(df[attribute])
 
 
