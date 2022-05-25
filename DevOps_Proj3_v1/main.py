@@ -99,8 +99,19 @@ class ModelInput(BaseModel):
         }
 
 
+def data_folder_path(subfolder, file):
+    """[summary]
+    Args:
+        subfolder ([str]): [subfolder name]
+        file ([str]): [file name]
+    Returns:
+        [str]: [file complete path]
+    """
+    root = os.path.dirname(os.getcwd())
+    return os.path.join(root, "DevOps_Proj3_v1", subfolder, file)
+
 # Load artifacts
-lgbm_model = joblib.load('./model/best_clf.pkl')
+lgbm_model = joblib.load(data_folder_path('model','best_clf.pkl')
 
 
 # Root path
