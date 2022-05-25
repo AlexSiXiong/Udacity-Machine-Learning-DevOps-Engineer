@@ -1,0 +1,4 @@
+outs:
+- md5: aee6031f50ea21579fbe5885578245ba
+  size: 345090
+  path: best_clf.pkl
