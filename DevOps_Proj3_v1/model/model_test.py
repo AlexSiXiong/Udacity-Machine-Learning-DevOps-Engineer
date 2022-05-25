@@ -28,9 +28,6 @@ def data_folder_path(subfolder, file):
 DATA_PATH = data_folder_path('data', 'census_cleaned.csv')
 MODEL_PATH = data_folder_path('model','best_clf.pkl')
 
-
-DATA_PATH = '../data/census_cleaned.csv'
-MODEL_PATH = './best_clf.pkl'
 cat_features = [
     "workclass",
     "education",
