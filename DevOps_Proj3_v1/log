@@ -193,3 +193,14 @@ uvicorn.error - INFO - 25-May-22 03:59:25 - Application startup complete.
 uvicorn.error - INFO - 25-May-22 04:19:00 - Started server process [42826]
 uvicorn.error - INFO - 25-May-22 04:19:00 - Waiting for application startup.
 uvicorn.error - INFO - 25-May-22 04:19:00 - Application startup complete.
+uvicorn.error - INFO - 25-May-22 04:26:49 - Shutting down
+uvicorn.error - INFO - 25-May-22 04:26:49 - Waiting for application shutdown.
+uvicorn.error - INFO - 25-May-22 04:26:49 - Application shutdown complete.
+uvicorn.error - INFO - 25-May-22 04:26:49 - Finished server process [42826]
+uvicorn.error - INFO - 25-May-22 04:26:52 - Started server process [42913]
+uvicorn.error - INFO - 25-May-22 04:26:52 - Waiting for application startup.
+uvicorn.error - INFO - 25-May-22 04:26:52 - Application startup complete.
+uvicorn.error - INFO - 25-May-22 04:26:59 - Shutting down
+uvicorn.error - INFO - 25-May-22 04:26:59 - Waiting for application shutdown.
+uvicorn.error - INFO - 25-May-22 04:26:59 - Application shutdown complete.
+uvicorn.error - INFO - 25-May-22 04:26:59 - Finished server process [42913]
