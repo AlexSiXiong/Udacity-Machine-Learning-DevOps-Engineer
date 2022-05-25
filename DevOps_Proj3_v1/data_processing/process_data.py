@@ -68,10 +68,9 @@ def save_encoder_classes(path, attribute, le):
 
 def label_encoder(df, attribute, training):
     le = preprocessing.LabelEncoder()
-    
-    path = data_folder_path("Udacity-Machine-Learning-DevOps-Engineer/DevOps_Proj3_v1", 'data/label_encoders', f'{attribute}.npy')
+    path = data_folder_path("DevOps_Proj3_v1", 'data/label_encoders', f'{attribute}.npy')
     if not os.path.exists(path):
-        path = data_folder_path("DevOps_Proj3_v1", 'data/label_encoders', f'{attribute}.npy')
+        path = data_folder_path("Udacity-Machine-Learning-DevOps-Engineer/DevOps_Proj3_v1", 'data/label_encoders', f'{attribute}.npy')
     if training:
         le.fit(list(set(df[attribute])))        
         save_encoder_classes(path, attribute, le)
@@ -90,10 +89,10 @@ def label_encoding_attribute(df, training):
 
 def onehot_encoder(df, attribute, training):
     lb = preprocessing.LabelBinarizer()
-    
-    path = data_folder_path("Udacity-Machine-Learning-DevOps-Engineer/DevOps_Proj3_v1", 'data/onehot_encoders', f'{attribute}.npy')
+    path = data_folder_path("DevOps_Proj3_v1", 'data/label_encoders', f'{attribute}.npy')    
     if not os.path.exists(path):
-        path = data_folder_path("DevOps_Proj3_v1", 'data/label_encoders', f'{attribute}.npy')
+
+        path = data_folder_path("Udacity-Machine-Learning-DevOps-Engineer/DevOps_Proj3_v1", 'data/onehot_encoders', f'{attribute}.npy')
     if training:
         lb.fit(list(set(df[attribute])))
         save_encoder_classes(path, attribute, lb)    
