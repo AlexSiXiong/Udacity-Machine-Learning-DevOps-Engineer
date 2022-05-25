@@ -7,3 +7,4 @@ requests
 fastapi==0.70.0
 uvicorn
 flake8
+lightgbm==3.3.2
