@@ -29,9 +29,11 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ASIAZYKPQJWLBTIBNJWK
-          aws-secret-access-key: 6JqFg8ES8YBNWWPdvf2eSa4aw3ZnaNAEaAmzjuTB
-          aws-session-token: IQoJb3JpZ2luX2VjEKT//////////wEaDmFwLXNvdXRoZWFzdC0yIkcwRQIhAPSiVRfV4VXKUUSR8+eN9BPgTs1YOeYLoQUS0b8CbG/tAiBbZ7cmO0ce9Bwih8Ghi5usKUfTcwJNcKSyaKo7V3gAJCqeAwiN//////////8BEAAaDDY3MDcxODUxMjUzNCIMMhdSySj/yqR95GQYKvICpaWVHw7vPtAhbH5ughInBujBD1Dz4sHSVvlF556m9daGT6Qze+xjprIcpWNCe5vG1acoZYwxUfkLCHAA8BlBnjnBlJXtjc3hY8IjNoADii/70HX+XQcHQPgIrpD4bBcORIibOYwvR/oSZDasZSC5lp6aug2QqBWyLPFOHJUjxWpccmPoGXNpQQKlJWLsr/POI7PBwHxwRUgVXyzxpmRgqIo1HcxKFUclXdZ1hfxgXHfWskg82lPSRg+iwQqXQOIR2lCnF6kHkqVh0XN3ZhwMyNfdD1HgocGrx9OQ6elulFpbecJ8kAAwd14Hr2bWITfCYsgo+6R/gX+yG9dM/96pBEKEoMxUaSUKEgI9iq963a+WFC5b8APjNWmfhcaeclyMM50Wq7qAG2nh7TDi7fhRKQ8rJLXUFQhuB4oOSDDIjtpXrEhlLaTO/MDa6SJ51Buxnggazw3W0iZ3nAQ0qB4+xkxcB26lMtKU6zcTPs21r1CaDTDVpLiUBjqmAbzmNBUMDan0uqamKR2lhHMEhpq9u61eSmIM/8CNMMqTZk1CC6Og+VsWEtJiU2H71WG7dtfny2KfUQBZyjIlquaLJG5Af4OfElLxxlEx5KCQl8wqLzVzeC5fTEYv/cKKSgdOnvj8UxDpehk4hlwAEuDW1H0Xbg8LPn82giGvPIBOwbGWjS9vsmMv7HtVOSCzAN9IiXLvtvAA2fdSPOd+oBUO5yETrwk=
+
+          aws-access-key-id: ASIAZYKPQJWLFOWZYSP3
+          aws-secret-access-key: /LBfeaYcReEoJJhaI3P6fYw2MAAmc3Xq2fFLVeSb
+          aws-session-token: IQoJb3JpZ2luX2VjEKT//////////wEaDmFwLXNvdXRoZWFzdC0yIkcwRQIhAKcdsNAZNYYnzRKVCqNxmHSKylhQtU8vXd3ybjfsKp4oAiBjUIOW4Vy+pr6NJXPEkLbEXk+yeD0SMqKzAtyoe9SBfyqeAwiO//////////8BEAAaDDY3MDcxODUxMjUzNCIMfbQCXTmIFdhDMuItKvIC0M9uVkCKwgHzNbA3QhfIicd/XGG4B/13YQ8ceiU6NsFKCZBBN+cp8fuFjeDVfpZ7Q9N0et03by08J54tzXwXilBHg8eII2jJesm9yGfGjI9SNSv2BJ7i8QdGb1U3IhUEInTgGXbOsnkCsQySkQz4X+CYbrKmVLYPowTAP9+v5hzchKCOG//3wNorSdVqt+ZFU+WDUKpZM7XAVw1vl//X8lo/DWwps6nIW5VfWkUzWWROZkZZ14xdWePlmCD1ia0poY90lkWOHJyp+l1MaCJMXF7xXnfWWqrvs461kAGPKRpT9XZWZkse714driLjDZiPFO9gSaaso1ujW1TED+6UwHUTCmBC3hP4EvbWejGz0z8tn5HvFikDbKFgoMtjyTD7gBjxvvjBLeSwRlBwfySqHfHotArf7291ymwhHSGENh9l6sDQLRIAb/qKJex85eB/WcIPl1l6b3NtGsg/uMh1F2Nw+FHUML8Xk8/zh3Tuvpv5szCAv7iUBjqmAcGo1yG3A6y9WxKf1n2loYbpZLDK08V8MzRLlNsCxEyMEnyz4UI6IbYbIiTLHDAZVKoTxZDtSnqS4aaZHfbPzWKn7wbUwn9PN3fZuqc1fGWk4K2njzvNJUP2il8vNMWzYkuOGgC+cGmwzkkN5JfdTwdKE91VmlOB1mej7jPL7bDbSMruWXuQmq3+Fwr/KESPxAzYjvU8mLNQ/JWs5L8ENG+tA0T/7vM=
+
           aws-region: ap-southeast-2
         
       - name: Setup DVC
