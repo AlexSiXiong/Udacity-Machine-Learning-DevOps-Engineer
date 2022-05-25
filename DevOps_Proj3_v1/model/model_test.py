@@ -6,6 +6,10 @@ import pandas as pd
 import pytest
 from sklearn.model_selection import train_test_split
 
+import sys
+sys.path.append('.')
+from  data_processing.process_data import entire_data_processing  
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 
 
@@ -24,6 +28,9 @@ def data_folder_path(subfolder, file):
 DATA_PATH = data_folder_path('data', 'census_cleaned.csv')
 MODEL_PATH = data_folder_path('model','best_clf.pkl')
 
+
+DATA_PATH = '../data/census_cleaned.csv'
+MODEL_PATH = './best_clf.pkl'
 cat_features = [
     "workclass",
     "education",
@@ -62,9 +69,22 @@ def test_model():
 
 def test_process_data(data):
 
-    """ Test the data split """
-
-    train, _ = train_test_split(data, test_size=0.20)
+    """ data shape and label content """
     
-    assert int(len(data)*0.8) == len(train)
+    np_data = entire_data_processing(data, True)
+    
+    y = np_data[:, -1]
+    X = np_data[:, :-1]
+    assert X.shape == (20312, 9)
+    assert X.shape[0] == len(y)
+    assert {0,1} == set(y)
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
