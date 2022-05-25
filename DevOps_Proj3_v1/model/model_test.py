@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import logging
 import joblib
@@ -8,8 +9,20 @@ from sklearn.model_selection import train_test_split
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 
 
-DATA_PATH = '../data/census_cleaned.csv'
-MODEL_PATH = './best_clf.pkl'
+def data_folder_path(subfolder, file):
+    """[summary]
+    Args:
+        subfolder ([str]): [subfolder name]
+        file ([str]): [file name]
+    Returns:
+        [str]: [file complete path]
+    """
+    root = os.path.dirname(os.getcwd())
+    return os.path.join(root, "Udacity-Machine-Learning-DevOps-Engineer/DevOps_Proj3_v1", subfolder, file)
+
+
+DATA_PATH = data_folder_path('data', 'census_cleaned.csv')
+MODEL_PATH = data_folder_path('model','best_clf.pkl')
 
 cat_features = [
     "workclass",
